@@ -54,12 +54,9 @@
                         </page>
                     </notebook>
                 </sheet>
-                <!-- <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers"/>
-                    <field name="activity_ids" widget="mail_activity"/>
-                    <field name="message_ids" options="{'post_refresh': 'recipients'}" widget="mail_thread"/>
-                </div> -->
-            </form></field>
+                <chatter/>
+            </form>
+        </field>
     </record>
     <!-- Animal Kanban View -->
     <record id="view_animal_kanban" model="ir.ui.view">
@@ -89,8 +86,8 @@
                                         <field name="gender"/>
                                     </li>
                                     <li t-if="record.species_id.raw_value and record.breed_id.raw_value">
+                                        <field name="species_id"/> |
                                         <field name="breed_id"/>
-                                        <field name="species_id"/>
                                     </li>
                                 </ul>
                                 <div class="oe_kanban_partner_links"/>
