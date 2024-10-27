@@ -1,14 +1,14 @@
 <odoo>
 
-    <!-- Animal breed Tree View -->
-    <record id="view_animal_breed_tree" model="ir.ui.view">
-        <field name="name">view.animal.breed.tree</field>
+    <!-- Animal breed list View -->
+    <record id="view_animal_breed_list" model="ir.ui.view">
+        <field name="name">view.animal.breed.list</field>
         <field name="model">animal.breed</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="species_id" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -41,7 +41,7 @@
     <record id="action_animal_breed" model="ir.actions.act_window">
         <field name="name">Breeds</field>
         <field name="res_model">animal.breed</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create a breed.
