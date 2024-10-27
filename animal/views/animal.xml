@@ -12,6 +12,7 @@
                 <field name="species_id"/>
                 <field name="breed_id"/>
                 <field name="color_id"/>
+                <field name="neutered"/>
             </list></field>
     </record>
     <!-- Animal Form View -->
@@ -47,6 +48,7 @@
                                     <field name="ref"/>
                                     <field name="weight"/>
                                     <field name="birth_date"/>
+                                    <field name="neutered"/>
                                 </group>
                             </group>
                         </page>
@@ -113,7 +115,6 @@
                 <filter domain="[('gender', '=', 'female')]" name="female" string="Female"/>
                 <filter domain="[('gender', '=', 'male')]" name="male" string="Male"/>
                 <filter domain="[('gender', '=', 'hermaphrodite')]" name="hermaphrodite" string="Hermaphrodite"/>
-                <filter domain="[('gender', '=', 'neutered')]" name="neutered" string="Neutered"/>
                 <separator/>
                 <filter domain="[('active', '=', False)]" name="inactive" string="Archived"/>
                 <separator/>

@@ -22,11 +22,11 @@ class Animal(models.Model):
             ("female", "Female"),
             ("male", "Male"),
             ("hermaphrodite", "Hermaphrodite"),
-            ("neutered", "Neutered"),
         ],
         default="female",
         required=True,
     )
+    neutered = fields.Boolean(default=False)
     active = fields.Boolean(default=True)
     image = fields.Binary(
         attachment=True, help="This field holds the photo of the animal."
